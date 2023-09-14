@@ -8,12 +8,12 @@
         "source": "/Users/JackPan/Desktop/Hedone.PayHelperApp/app/src/main/res/drawable/shape_green_btn.xml"
     },
     {
-        "merged": "/Users/JackPan/Desktop/Hedone.PayHelperApp/app/build/intermediates/res/merged/JuFuPayGr1/debug/drawable-hdpi_shape_red_btn.xml.flat",
-        "source": "/Users/JackPan/Desktop/Hedone.PayHelperApp/app/src/main/res/drawable-hdpi/shape_red_btn.xml"
-    },
-    {
         "merged": "/Users/JackPan/Desktop/Hedone.PayHelperApp/app/build/intermediates/res/merged/JuFuPayGr1/debug/layout_mylayout.xml.flat",
         "source": "/Users/JackPan/Desktop/Hedone.PayHelperApp/app/src/main/res/layout/mylayout.xml"
+    },
+    {
+        "merged": "/Users/JackPan/Desktop/Hedone.PayHelperApp/app/build/intermediates/res/merged/JuFuPayGr1/debug/drawable-hdpi_shape_red_btn.xml.flat",
+        "source": "/Users/JackPan/Desktop/Hedone.PayHelperApp/app/src/main/res/drawable-hdpi/shape_red_btn.xml"
     },
     {
         "merged": "/Users/JackPan/Desktop/Hedone.PayHelperApp/app/build/intermediates/res/merged/JuFuPayGr1/debug/layout_activity_transaction.xml.flat",

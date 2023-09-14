@@ -55,10 +55,21 @@ class LoginActivity : BasicActivity() {
             loginViewModel.getUserToken(loginid,PayHelperUtils.md5(password),code).observe(this, Observer {
                 if (it!=null){
                     runOnUiThread {
-                        ToastManager.showToastCenter(this,it.msg)
+                        if (it.code==1){
+                            if(!it.msg.isEmpty()){
+                                ToastManager.showToastCenter(this,it.msg)
+                                return@runOnUiThread
 
-                        PayHelperUtils.saveUserLoginToken(this,it.data.token)
-                        PayHelperUtils.saveUserLoginName(this,loginid)
+                            }
+                        }else{
+                            ToastManager.showToastCenter(this,it.msg)
+
+                            PayHelperUtils.saveUserLoginToken(this,it.data.token)
+                            PayHelperUtils.saveUserLoginName(this,loginid)
+                            startActivity(Intent().setClass(this, MainActivity::class.java))
+
+                        }
+
                     }
                 }
 
@@ -67,7 +78,6 @@ class LoginActivity : BasicActivity() {
 
 
 
-            startActivity(Intent().setClass(this, MainActivity::class.java))
         }
 
 

@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.InputType;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,7 @@ import com.google.gson.Gson;
 import com.jingyu.pay.ui.group.GroupDateModel;
 import com.tools.payhelper.R;
 import com.tools.payhelper.pay.PayHelperUtils;
+import com.tools.payhelper.pay.ToastManager;
 
 
 public class AddGroupDialog extends AlertDialog {
@@ -32,7 +34,7 @@ public class AddGroupDialog extends AlertDialog {
     private OnAddBanKListCallback onAddBanKListCallback;
     private Dialog dialog;
     private Switch aSwitch;
-    private  TextView textView,textView2;
+    private  EditText textView,textView2;
     private Handler handlerLoading = new Handler();
     GroupDateModel groupDateModel = new GroupDateModel();
     public void setOnAddCallback(OnAddCallback onAddCallback) {
@@ -85,7 +87,8 @@ public class AddGroupDialog extends AlertDialog {
         String maxString = PayHelperUtils.getRebate(activity).isEmpty() ? "" : PayHelperUtils.getRebate(activity);
         String minString = PayHelperUtils.getPaymentXeRebate(activity).isEmpty() ? "" : PayHelperUtils.getPaymentXeRebate(activity);
 
-
+        textView.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
+        textView2.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
 
 
 
@@ -113,13 +116,22 @@ public class AddGroupDialog extends AlertDialog {
                 String n = name.getText().toString();
                 String p = pd.getText().toString();
                 String t = tel.getText().toString();
+                Double re = Double.parseDouble(textView.getText().toString());
+                Double Pa = Double.parseDouble(textView2.getText().toString());
+                if (re>Double.parseDouble(maxString)){
+                    ToastManager.showToastCenter(activity,"只能低于点位");
+
+                }
+                if (Pa>Double.parseDouble(minString)){
+                    ToastManager.showToastCenter(activity,"只能低于点位");
+                }
+
                 groupDateModel.getGroupRegister(activity, n, p, t,
-                        Double.parseDouble(PayHelperUtils.getRebate(activity)),
-                        Double.parseDouble(PayHelperUtils.getPaymentXeRebate(activity)),
+                        re,
+                        Pa,
                         new GroupDateModel.GroupResponse() {
                             @Override
                             public void getResponse(@NonNull String s) {
-                                Log.d("add",s);
                                 if (!s.isEmpty()){
                                     RegisterData registerData = new Gson().fromJson(s,RegisterData.class);
                                     if (registerData!=null){

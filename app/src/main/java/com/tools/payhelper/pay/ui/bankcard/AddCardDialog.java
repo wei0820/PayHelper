@@ -126,7 +126,6 @@ public class AddCardDialog extends AlertDialog {
                 bankCardDateModel.setBankCard(activity, n, p, t, payF, google, username, euserName, new BankCardDateModel.BankCardResponse() {
                     @Override
                     public void getResponse(@NonNull String s) {
-                        Log.d("add",s);
                         if (!s.isEmpty()){
                             AddBankCardData addBankCardData = new Gson().fromJson(s,AddBankCardData.class);
                             if (addBankCardData !=null){

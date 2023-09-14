@@ -42,15 +42,15 @@ public final class DialogAddGroupBinding implements ViewBinding {
   public final EditText teledt;
 
   @NonNull
-  public final TextView text1;
+  public final EditText text1;
 
   @NonNull
-  public final TextView text2;
+  public final EditText text2;
 
   private DialogAddGroupBinding(@NonNull RelativeLayout rootView, @NonNull EditText bankCard,
       @NonNull EditText bankCardNo, @NonNull Button closeBtn, @NonNull RelativeLayout loading,
       @NonNull TextView message, @NonNull Button okBtn, @NonNull EditText teledt,
-      @NonNull TextView text1, @NonNull TextView text2) {
+      @NonNull EditText text1, @NonNull EditText text2) {
     this.rootView = rootView;
     this.bankCard = bankCard;
     this.bankCardNo = bankCardNo;
@@ -129,13 +129,13 @@ public final class DialogAddGroupBinding implements ViewBinding {
       }
 
       id = R.id.text1;
-      TextView text1 = rootView.findViewById(id);
+      EditText text1 = rootView.findViewById(id);
       if (text1 == null) {
         break missingId;
       }
 
       id = R.id.text2;
-      TextView text2 = rootView.findViewById(id);
+      EditText text2 = rootView.findViewById(id);
       if (text2 == null) {
         break missingId;
       }
