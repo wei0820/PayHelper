@@ -87,8 +87,6 @@ public class AddGroupDialog extends AlertDialog {
         String maxString = PayHelperUtils.getRebate(activity).isEmpty() ? "" : PayHelperUtils.getRebate(activity);
         String minString = PayHelperUtils.getPaymentXeRebate(activity).isEmpty() ? "" : PayHelperUtils.getPaymentXeRebate(activity);
 
-        textView.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
-        textView2.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
 
 
 

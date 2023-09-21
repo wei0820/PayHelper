@@ -52,8 +52,10 @@
         android:layout_height="wrap_content"
         android:text="用戶密碼"
         android:textSize="16sp"
+
         ></TextView>
     <EditText
+
         android:layout_width="160dp"
         android:layout_height="0dp"
         android:singleLine="true"
@@ -72,11 +74,12 @@
 
         android:gravity="left|center_vertical"
         android:paddingLeft="12dp"
-        android:inputType="textVisiblePassword"
+        android:inputType="textPassword"
         android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         ></EditText>
 
     <TextView
+
         android:id="@+id/text3"
         app:layout_constraintTop_toBottomOf="@+id/text2"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -107,7 +110,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBaseline_toBaselineOf="@id/text3"
 
-        android:inputType="textPassword"
+        android:inputType="textVisiblePassword"
         android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         ></EditText>
 

@@ -37,6 +37,7 @@ class LoginActivity : BasicActivity() {
             var loginid = edt.text.toString()
             var password = edt2.text.toString()
             var code = edt3.text.toString()
+
             if (loginid.isEmpty()){
                 ToastManager.showToastCenter(this,"帐号不得为空")
                 return@setOnClickListener

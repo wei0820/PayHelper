@@ -113,7 +113,7 @@ INJECTED from /Users/JackPan/Desktop/Hedone.PayHelperApp/app/src/main/AndroidMan
 		INJECTED from /Users/JackPan/Desktop/Hedone.PayHelperApp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/JackPan/Desktop/Hedone.PayHelperApp/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /Users/JackPan/Desktop/Hedone.PayHelperApp/app/src/main/AndroidManifest.xml:6:5-30
+		ADDED from /Users/JackPan/Desktop/Hedone.PayHelperApp/app/src/main/AndroidManifest.xml:6:5-32
 		INJECTED from /Users/JackPan/Desktop/Hedone.PayHelperApp/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/JackPan/Desktop/Hedone.PayHelperApp/app/src/main/AndroidManifest.xml
 	xmlns:tools

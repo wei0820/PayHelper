@@ -69,10 +69,8 @@ class SellViewModel : ViewModel() {
 
         sellDateModel.getSellList(context, object : SellDateModel.SellResponse {
             override fun getResponse(s: String) {
-
                 viewModelScope.launch {
                     if (!s.isEmpty()){
-
                         var data = Gson().fromJson(s,SellListData::class.java)
                         if (data!=null){
                             mSellListData.value = data
